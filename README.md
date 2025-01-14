@@ -5,13 +5,15 @@ This repo is for a project which pack AWS S3 Java Operation into a Spring Boot s
 There are 3 Steps. Can follow the example project <code>aws-s3-spring-boot-starter-example</code>.
 ### 1. Add Maven Dependency In Spring Boot Project
 <h5><strong><code>aws-s3-spring-boot-starter-example/pom.xml</code></strong></h5>
-```
+
+```xml
 <dependency>
             <groupId>com.aws.s3.self.define.starter</groupId>
             <artifactId>aws-s3-spring-boot-starter</artifactId>
             <version>0.0.1-SNAPSHOT</version>
 </dependency>
 ```
+
 ### 2. Add AWS S3 config
 <h5><strong><code>aws-s3-spring-boot-starter-example/src/main/resources/application.yml</code></strong></h5>
 ```
