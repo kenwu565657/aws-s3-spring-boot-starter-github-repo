@@ -16,15 +16,18 @@ There are 3 Steps. Can follow the example project <code>aws-s3-spring-boot-start
 
 ### 2. Add AWS S3 config
 <h5><strong><code>aws-s3-spring-boot-starter-example/src/main/resources/application.yml</code></strong></h5>
-```
+
+```yaml
 aws:
   s3:
     accessKey: <Your Access Key>
     secretKey: <Your Secret Key>
     region: <Your Region>
 ```
+
 ### 3. Inject In Spring boot Project
 <h5><strong><code>aws-s3-spring-boot-starter-example/src/test/java/com/aws/s3/self/define/starter/aws/s3/springboot/starter/example/AwsS3SpringBootStarterExampleApplicationTests.java</code></strong></h5>
+
 ```java
 @SpringBootTest
 class AwsS3SpringBootStarterExampleApplicationTests {
@@ -51,15 +54,18 @@ There are 3 Maven Modules.
 The module holds the logic of the S3 Operation and Auto config setting.
 The logic can also be tested here if you replace the properties in
 <h5><strong><code>aws-s3-spring-boot-autoconfigure/src/test/resources/application.yml</code></strong></h5>
-```
+
+```yaml
 aws:
   s3:
     accessKey: <Your Access Key>
     secretKey: <Your Secret Key>
     region: <Your Region>
 ```
+
 Then Run Test In
 <h5><strong><code>aws-s3-spring-boot-autoconfigure/src/test/java/com/aws/s3/self/define/starter/AmazonS3OperatorTest.java</code></strong></h5>
+
 ```java
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -75,6 +81,7 @@ public class AmazonS3OperatorTest {
     ...
 }
 ```
+
 Local Env Testing Results: <br/> <br />
 ![](local_unit_test_result.png)
 
@@ -84,6 +91,7 @@ This module have dependency on aws-s3-spring-boot-autoconfigure. Expected to be 
 This module is an example Spring Boot project using the starter. Can test whether you can inject or not by running test after finishing the 3 Steps above.
 
 <h5><strong><code>aws-s3-spring-boot-starter-example/src/test/java/com/aws/s3/self/define/starter/aws/s3/springboot/starter/example/AwsS3SpringBootStarterExampleApplicationTests.java</code></strong></h5>
+
 ```java
 @SpringBootTest
 class AwsS3SpringBootStarterExampleApplicationTests {
