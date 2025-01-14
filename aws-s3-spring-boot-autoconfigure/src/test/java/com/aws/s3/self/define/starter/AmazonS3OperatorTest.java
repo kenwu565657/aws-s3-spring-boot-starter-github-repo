@@ -48,8 +48,9 @@ public class AmazonS3OperatorTest {
 
     @Order(1)
     @Test
-    void testListBucket() {
+    void testInitListBuckets() {
         var bucketList = amazonS3Operator.listBuckets();
+        Assertions.assertNotNull(bucketList);
         numberOfBuckets = bucketList.size();
     }
 
@@ -69,7 +70,7 @@ public class AmazonS3OperatorTest {
 
     @Order(4)
     @Test
-    void testListBuckets() {
+    void testAgainListBuckets() {
         var bucketList = amazonS3Operator.listBuckets();
         List<String> bucketNames = bucketList.stream().map(Bucket::name).toList();
         Assertions.assertEquals(numberOfBuckets, bucketNames.size());
@@ -78,7 +79,7 @@ public class AmazonS3OperatorTest {
 
     @Order(5)
     @Test
-    void uploadFile() {
+    void testUploadFile() {
         try {
             File testingFile = ResourceUtils.getFile(TEST_FIlE_CLASS_PATH);
             Assertions.assertDoesNotThrow(() -> amazonS3Operator.uploadFile(testingBucketName, testingFileName, testingFile));
@@ -89,14 +90,14 @@ public class AmazonS3OperatorTest {
 
     @Order(6)
     @Test
-    void downloadFile() {
+    void testDownloadFile() {
         byte[] byteArray = amazonS3Operator.downloadFile(testingBucketName, testingFileName);
         Assertions.assertNotNull(byteArray);
     }
 
     @Order(7)
     @Test
-    void deleteFile() {
+    void testDeleteFile() {
         Assertions.assertDoesNotThrow(() -> amazonS3Operator.deleteFile(testingBucketName, testingFileName));
     }
 
