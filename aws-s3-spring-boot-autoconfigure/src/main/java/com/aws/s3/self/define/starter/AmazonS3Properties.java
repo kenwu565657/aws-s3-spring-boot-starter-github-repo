@@ -31,4 +31,5 @@ public class AmazonS3Properties {
     public void setRegion(String region) {
         this.region = region;
     }
+
 }

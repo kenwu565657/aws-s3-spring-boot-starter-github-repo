@@ -12,7 +12,6 @@ import org.springframework.context.annotation.Bean;
 public class AmazonS3OperatorTestConfiguration {
 
     @Bean
-    @ConfigurationProperties(prefix = "aws.s3")
     AmazonS3Properties amazonS3Properties() {
         return new AmazonS3Properties();
     }

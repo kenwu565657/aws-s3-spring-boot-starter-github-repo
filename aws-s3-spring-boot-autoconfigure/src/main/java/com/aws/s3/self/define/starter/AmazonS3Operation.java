@@ -1,8 +1,9 @@
 package com.aws.s3.self.define.starter;
 
-import com.amazonaws.services.s3.model.AmazonS3Exception;
-import com.amazonaws.services.s3.model.Bucket;
 
+import software.amazon.awssdk.services.s3.model.Bucket;
+
+import java.io.File;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,9 +13,14 @@ public interface AmazonS3Operation {
 
     Optional<Bucket> getBucket(String bucketName);
 
-    Bucket createBucket(String bucketName);
+    void createBucket(String bucketName);
 
-    void copyObject(String bucketName, String sourceKey, String destinationKey) throws AmazonS3Exception;
+    void deleteBucket(String bucketName);
 
+    void uploadFile(String bucketName, String fileName, File file);
+
+    byte[] downloadFile(String bucketName, String fileName);
+
+    void deleteFile(String bucketName, String fileName);
 
 }
