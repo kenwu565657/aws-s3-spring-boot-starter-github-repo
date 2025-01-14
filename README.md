@@ -3,7 +3,7 @@ This repo is for a project which pack AWS S3 Java Operation into a Spring Boot s
 
 ## Steps To Use The Starter
 There are 3 Steps. Can follow the example project <code>aws-s3-spring-boot-starter-example</code>.
-1. Add Maven Dependency In Spring Boot Project
+### 1. Add Maven Dependency In Spring Boot Project
 <h5 a><strong><code>aws-s3-spring-boot-starter-example/pom.xml</code></strong></h5>
 ```xml
 <dependency>
@@ -12,7 +12,7 @@ There are 3 Steps. Can follow the example project <code>aws-s3-spring-boot-start
             <version>0.0.1-SNAPSHOT</version>
 </dependency>
 ```
-2. Add AWS S3 config
+### 2. Add AWS S3 config
 <h5 a><strong><code>aws-s3-spring-boot-starter-example/src/main/resources/application.yml</code></strong></h5>
 ```yaml
 aws:
@@ -21,7 +21,7 @@ aws:
     secretKey: <Your Secret Key>
     region: <Your Region>
 ```
-3. Inject In Spring boot Project
+### 3. Inject In Spring boot Project
 <h5 a><strong><code>aws-s3-spring-boot-starter-example/src/test/java/com/aws/s3/self/define/starter/aws/s3/springboot/starter/example/AwsS3SpringBootStarterExampleApplicationTests.java</code></strong></h5>
 ```java
 @SpringBootTest
