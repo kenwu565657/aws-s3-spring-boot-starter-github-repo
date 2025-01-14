@@ -51,7 +51,7 @@ class AwsS3SpringBootStarterExampleApplicationTests {
 ## Repo Structure And Maven Module Details
 There are 3 Maven Modules.
 ### 1. aws-s3-spring-boot-autoconfigure <br />
-The module holds the logic of the S3 Operation and Auto config setting.
+This module holds the logic of the S3 Operation and Auto config setting.
 The logic can also be tested here if you replace the properties in
 <h5><strong><code>aws-s3-spring-boot-autoconfigure/src/test/resources/application.yml</code></strong></h5>
 
