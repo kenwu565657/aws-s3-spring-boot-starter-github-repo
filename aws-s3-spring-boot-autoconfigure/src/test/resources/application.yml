@@ -1,0 +1,5 @@
+aws:
+  s3:
+    accessKey: <Your access key>
+    secretKey: <Your secret key>
+    region: <Your region>
