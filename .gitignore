@@ -1,0 +1,6 @@
+# ingore Intellij file
+.idea
+# ingore build file
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
