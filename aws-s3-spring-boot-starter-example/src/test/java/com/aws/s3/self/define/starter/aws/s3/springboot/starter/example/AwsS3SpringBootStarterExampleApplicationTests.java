@@ -15,7 +15,7 @@ class AwsS3SpringBootStarterExampleApplicationTests {
     @Test
     void contextLoads() {
         Assertions.assertNotNull(amazonS3Operation);
-        Assertions.assertTrue(amazonS3Operation instanceof AmazonS3Operator);
+        Assertions.assertInstanceOf(AmazonS3Operator.class, amazonS3Operation);
     }
 
     @Test

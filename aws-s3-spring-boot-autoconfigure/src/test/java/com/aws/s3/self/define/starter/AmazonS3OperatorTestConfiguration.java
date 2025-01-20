@@ -8,11 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Bean;
 
 @EnableConfigurationProperties
-@SpringBootApplication(scanBasePackages = {"com.aws.s3.self.define.starter"})
+@SpringBootApplication
 public class AmazonS3OperatorTestConfiguration {
 
-    @Bean
-    AmazonS3Properties amazonS3Properties() {
-        return new AmazonS3Properties();
-    }
 }
